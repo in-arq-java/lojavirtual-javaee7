@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Monitor de eventos de produto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="js/libs/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+        <script src="js/libs/jquery/jquery.2.0.3.js"></script>
+        <script src="js/libs/twitter-bootstrap/js/bootstrap.js" ></script>
+        <script src="js/monitor.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="panel">
+                <table id="tabelaEventos" class="table table-hover">
+                    <thead class="bg-primary">
+                        <tr>
+                            <td colspan="7" class="text-center">
+                                <h2>Monitor de Eventos</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nome</th>
+                            <th>Categoria</th>
+                            <th>Preço</th>
+                            <th>Marca</th>
+                            <th>Evento</th>
+                            <th>
+                                <button id="btInit" class="btn text-info">Iniciar</button>
+                                <button id="btFim" class="btn text-info">Finalizar</button>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaEventos">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

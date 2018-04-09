@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Editando produto</title>
+        <link href="js/libs/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+        <script src="js/libs/jquery/jquery.2.0.3.js"></script>
+        <script src="js/libs/twitter-bootstrap/js/bootstrap.js" ></script>
+        <script src="js/formProdutos.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h2>Editando Produto</h2>
+                </div>
+                <div class="panel-body">
+                    <form role="form" class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="id">Id:</label>
+                            <div class="col-sm-3">
+                                <input type="text" id="id" disabled="disabled" class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="nome">Nome:</label>
+                            <div class="col-sm-5">
+                                <input type="text" id="nome" class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="marca">Marca:</label>
+                            <div class="col-sm-5">
+                                <input type="text" id="marca" class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="categoria">Categoria:</label>
+                            <div class="col-sm-5">
+                                <select class="form-control" id="categoria"></select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="preco">Preco:</label>
+                            <div class="col-sm-3">
+                                <input type="text" id="preco" class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="status">Status:</label>
+                            <div class="checkbox col-sm-3">
+                                <label><input type="checkbox" id="status" value="ativo"/>ativo</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Tipo de Produto:</label>
+                            <label class="radio-inline"><input type="radio" name="tipo" id="tipoMaterial" value="material" checked="checked"/>material</label>
+                            <label class="radio-inline"><input type="radio" name="tipo" id="tipoDigital" value="digital"/>digital</label>
+                        </div>
+                        <div id="dadosProdutoMaterial">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="taxaEntrega">Taxa de Entrega:</label>
+                                <div class="col-sm-3">
+                                    <input type="text" id="taxaEntrega" class="form-control"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="dadosProdutoDigital">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="nomeArquivo">Nome do Arquivo:</label>
+                                <div class="col-sm-5">
+                                    <input type="text" id="nomeArquivo" class="form-control"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="tamanho">Tamanho:</label>
+                                <div class="col-sm-3">
+                                    <input type="text" id="tamanho" class="form-control"/>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="button" id="btSalvar" value="Salvar" class="btn btn-primary col-sm-2"/>
+                    </form>
+                </div>
+            </div>
+            <!-- Janela de dialogo modal do bootstrap -->
+            <div class="modal fade" id="confirmacao" role="dialog">
+                <div class="modal-dialog">
+
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <p class ="text-center" id="mensagem"></p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
